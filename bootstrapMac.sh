@@ -185,6 +185,7 @@ if promptQ "Git Completion"; then
    echo "source ~/.bash-addons/.git-completion.sh" >> ~/.bash_profile; 
 fi;
 
+git config --global credential.helper 'cache --timeout 7200'
 git config --global rerere.enabled true;
 git config --global core.editor nano;
 git config --global alias.co checkout;
